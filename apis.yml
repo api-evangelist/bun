@@ -1,19 +1,43 @@
 aid: bun
 name: Bun
-description: 'Bun is a company surfaced as a portfolio company of kleiner-perkins and added to the API
-  Evangelist network as a stub for enrichment. Sector: developer-tools. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Bun is a fast, all-in-one JavaScript and TypeScript toolkit built by Oven (oven-sh). A single
+  self-contained binary bundles a Node.js-compatible runtime, a package manager (a drop-in,
+  dramatically faster replacement for npm/yarn/pnpm), a native bundler and single-file executable
+  compiler, and a Jest-compatible test runner. Bun is designed as an incrementally adoptable drop-in
+  replacement for Node.js, emphasizing startup speed, install speed, and elegant built-in APIs. It is
+  open source, distributed as a binary via an install script, Homebrew, Docker, and npm, and is
+  surfaced here as a Kleiner Perkins portfolio company. Bun exposes no hosted REST API; the CLI and
+  the runtime/bundler APIs are the developer surface.
 url: https://raw.githubusercontent.com/api-evangelist/bun/refs/heads/main/apis.yml
 x-type: company
 x-source: kleiner-perkins-portfolio
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://bun.com/logo.svg
 tags:
 - Company
 - Developer Tools
+- JavaScript
+- TypeScript
+- Runtime
+- Package Manager
+- Bundler
+- Test Runner
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +47,36 @@ maintainers:
 common:
 - type: Website
   url: https://bun.com
+- type: DeveloperPortal
+  url: https://bun.com/docs
+- type: Documentation
+  url: https://bun.com/docs
+- type: APIReference
+  url: https://bun.com/reference
+- type: GettingStarted
+  url: https://bun.com/docs/installation
+- type: Guides
+  url: https://bun.com/guides
+- type: Blog
+  url: https://bun.com/blog
+- type: GitHubOrganization
+  url: https://github.com/oven-sh
+- type: Support
+  url: https://bun.com/discord
+- type: CLI
+  url: cli/bun-cli.yml
+- type: ChangeLog
+  url: changelog/bun-changelog.yml
+- type: Packages
+  url: packages/bun-packages.yml
+- type: SDKs
+  url: packages/bun-packages.yml
+- type: LLMsTxt
+  url: llms/bun-llms.txt
+- type: DomainSecurity
+  url: security/bun-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
