@@ -1,0 +1,66 @@
+generated: '2026-07-18'
+method: searched
+source: https://bun.com/blog
+scheme: semver
+current_version: 1.3.14
+description: >-
+  Bun publishes dated, versioned release notes as blog posts. Each minor/patch release post
+  enumerates the issues fixed and the notable new features. There is no separate API changelog;
+  the runtime/toolkit release notes are the source of truth.
+changelog_url: https://bun.com/blog
+entries:
+- version: bun-in-rust
+  date: '2026-07-08'
+  title: Rewriting Bun in Rust
+  breaking: false
+  highlights:
+  - Announcement/engineering post on the ongoing rewrite of Bun's codebase toward Rust
+- version: 1.3.14
+  date: '2026-05-13'
+  title: Bun v1.3.14
+  breaking: false
+  additions: true
+  highlights:
+  - Fixes 92 issues
+  - New Bun.Image API
+  - 7x faster warm installs
+  - Experimental HTTP/2 and HTTP/3 support
+- version: 1.3.13
+  date: '2026-04-20'
+  title: Bun v1.3.13
+  breaking: false
+  additions: true
+  highlights:
+  - Fixes 82 issues
+  - bun test parallel/isolate/shard flags
+  - 17x less memory for tarballs
+  - 5.5x faster gzip
+- version: 1.3.12
+  date: '2026-04-09'
+  title: Bun v1.3.12
+  breaking: false
+  additions: true
+  highlights:
+  - Fixes 120 issues
+  - Markdown rendering in terminal
+  - Bun.WebView
+  - In-process scheduler
+- version: 1.3.11
+  date: '2026-03-18'
+  title: Bun v1.3.11
+  breaking: false
+  additions: true
+  highlights:
+  - Fixes 105 issues
+  - 4 MB smaller on Linux
+  - OS-level cron jobs
+- version: 1.3.10
+  date: '2026-02-26'
+  title: Bun v1.3.10
+  breaking: false
+  additions: true
+  highlights:
+  - Fixes 155 issues
+  - Native REPL
+  - ES decorators
+  - Windows ARM64 support

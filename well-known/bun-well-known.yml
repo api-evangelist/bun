@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of /.well-known/* on bun.com and bun.sh
+host: https://bun.com
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  No /.well-known/ discovery documents are published on bun.com or bun.sh. Bun is an
+  open-source JavaScript runtime/toolkit distributed as a binary and via npm; it exposes
+  no hosted API, OAuth server, or discovery surface. Absence recorded as valid data.

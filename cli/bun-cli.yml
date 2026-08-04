@@ -1,0 +1,112 @@
+generated: '2026-07-18'
+method: searched
+source: https://bun.com/docs/cli
+name: bun
+description: >-
+  Bun ships as a single self-contained binary that is simultaneously a JavaScript/TypeScript
+  runtime, a package manager, a bundler, and a test runner. The CLI is the primary interface to
+  every Bun capability; there is no hosted REST API. The binary itself is catalogued in packages/.
+install_methods:
+- id: install-script
+  platform: macOS/Linux/WSL
+  command: curl -fsSL https://bun.com/install | bash
+- id: npm
+  platform: cross-platform
+  command: npm install -g bun
+- id: homebrew
+  platform: macOS/Linux
+  command: brew install oven-sh/bun/bun
+- id: docker
+  platform: container
+  command: docker pull oven/bun
+- id: powershell
+  platform: Windows
+  command: powershell -c "irm bun.com/install.ps1 | iex"
+- id: scoop
+  platform: Windows
+  command: scoop install bun
+- id: proto
+  platform: cross-platform
+  command: proto install bun
+command_groups:
+- group: run
+  description: Execute JavaScript/TypeScript files and package.json scripts
+  commands:
+  - name: bun run
+    summary: Run a file or a package.json script
+  - name: bun <file>
+    summary: Execute a JS/TS/JSX/TSX file directly
+  - name: bun --hot
+    summary: Run with hot reloading
+  - name: bun --watch
+    summary: Run and restart on file changes
+  - name: bun repl
+    summary: Start the native interactive REPL
+  - name: bun exec
+    summary: Run a shell command via Bun Shell
+- group: package-manager
+  description: Node.js-compatible package management (drop-in for npm/yarn/pnpm)
+  commands:
+  - name: bun install
+    summary: Install all dependencies from package.json
+  - name: bun add
+    summary: Add a dependency
+  - name: bun remove
+    summary: Remove a dependency
+  - name: bun update
+    summary: Update dependencies
+  - name: bun outdated
+    summary: List outdated dependencies
+  - name: bun ci
+    summary: Install with a frozen lockfile for reproducible CI builds
+  - name: bun link / bun unlink
+    summary: Link a local package for development
+  - name: bun pm
+    summary: Package manager utilities (cache, ls, hash, whoami, pack, migrate)
+  - name: bun publish
+    summary: Publish a package to a registry
+  - name: bun patch / bun patch-commit
+    summary: Patch a dependency in node_modules
+  - name: bunx
+    summary: Auto-install and run a package binary (equivalent to bun x)
+  - name: bun outdated / bun why
+    summary: Inspect the dependency graph
+- group: bundler
+  description: Native bundler and single-file executable compiler
+  commands:
+  - name: bun build
+    summary: Bundle JavaScript/TypeScript for the browser, Node, or Bun
+  - name: bun build --compile
+    summary: Compile a project into a standalone single-file executable
+- group: test-runner
+  description: Built-in Jest-compatible test runner
+  commands:
+  - name: bun test
+    summary: Run tests with the built-in fast test runner
+  - name: bun test --watch
+    summary: Re-run tests on change
+  - name: bun test --coverage
+    summary: Report code coverage
+- group: project
+  description: Project scaffolding and maintenance
+  commands:
+  - name: bun init
+    summary: Scaffold an empty Bun project
+  - name: bun create
+    summary: Scaffold a new project from a template or GitHub repo
+  - name: bun upgrade
+    summary: Upgrade Bun to the latest version
+  - name: bun completions
+    summary: Install shell autocompletion
+key_flows:
+- id: scaffold-and-run
+  description: bun init -> bun add <deps> -> bun run index.ts
+- id: fast-ci-install
+  description: bun ci (frozen lockfile) in CI/CD, or the oven-sh/setup-bun GitHub Action
+- id: compile-executable
+  description: bun build ./app.ts --compile --outfile app  (ship a single binary with no runtime dependency)
+- id: replace-node
+  description: Drop-in replace `node`/`npm`/`jest`/`esbuild` with `bun`/`bun install`/`bun test`/`bun build`
+notes:
+- Bun does not execute dependency lifecycle scripts by default; add packages to trustedDependencies to allow them.
+- Configuration lives in bunfig.toml; environment variables (BUN_CONFIG_*) take priority.

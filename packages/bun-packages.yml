@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.npmjs.com/package/bun
+packages:
+- language: javascript
+  registry: npm
+  name: bun
+  url: https://www.npmjs.com/package/bun
+  install: npm install -g bun
+  version: 1.3.14
+  description: Bun is a fast all-in-one JavaScript runtime. The npm package installs the Bun binary.
+  repository: https://github.com/oven-sh/bun
+  official: true
+- language: typescript
+  registry: npm
+  name: bun-types
+  url: https://www.npmjs.com/package/bun-types
+  install: bun add -d bun-types
+  version: 1.3.14
+  description: Type definitions and documentation for Bun's built-in APIs.
+  repository: https://github.com/oven-sh/bun
+  official: true
+- language: typescript
+  registry: npm
+  name: "@types/bun"
+  url: https://www.npmjs.com/package/@types/bun
+  install: npm install -D @types/bun
+  version: 1.3.14
+  description: DefinitelyTyped TypeScript definitions for bun (community-maintained stub that re-exports bun-types).
+  official: false
