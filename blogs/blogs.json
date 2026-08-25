@@ -2,6 +2,13 @@
   "repo": "bun",
   "feeds": [
     {
+      "source": "https://bun.com/rss.xml",
+      "feed_url": "https://bun.com/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://bun.com/guides",
       "feed_url": "https://bun.com/rss.xml",
       "title": "",
@@ -9,6 +16,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-08-15T12:22:01Z"
+  "post_count": 50,
+  "fetched": "2026-08-22T20:20:02Z"
 }
